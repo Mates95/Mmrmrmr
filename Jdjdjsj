@@ -1,0 +1,31 @@
+//1.a) Vytvorte program, ktorэ urин, иi celй инslo naинtanй z klбvesnice je sъиasќou intervalu < a,b >. Limitnй hodnoty intervalu sъ tieћ celй инsla naинtanй z klбvesnice. Ak je naинtanб hodnota sъиasќou intervalu, program vypнљe napr.: "Zadenй инslo 25 je sъиasќou intervalu < 5,35 >". Ak naинtanб hodnota nie je sъиasќou intervalu, program vypнљe: "Zadanй инslo 15 nie je sъиasќou intervalu < 25,60 >".
+
+#include < iostream >
+
+
+using namespace std;
+
+int main(){
+int *pIntervalHorna = new int;
+int *pIntervalDolna= new int;
+int *pHodnota= new int;
+cout< < "Zadajte dve cele cisla, ktore budu obmedzovat velkost intervalu. Format: 1. cislo je spodna hranica; 2. cislo je vrchna hranica."< < endl;
+cin > >*pIntervalDolna;
+cin > >*pIntervalHorna;
+cout< < "Zadajte hodnotu, ktoru hladate v intervale: "< < endl;
+cin > >*pHodnota;
+if((*pIntervalDolna< =*pHodnota) && (*pHodnota< =*pIntervalHorna)){
+
+cout< < "Zadana hodnota "< < *pHodnota< <" je sucastou zadaneho intervalu < "< < *pIntervalDolna< < ","< < *pIntervalHorna< < " >";
+
+}
+else{
+
+cout< < "Zadana hodnota "< < *pHodnota< < " je mimo zadaneho intervalu < "< < *pIntervalDolna< < ","< < *pIntervalHorna< < " >";
+}
+delete pIntervalHorna, pIntervalDolna,pHodnota;
+pIntervalHorna=0;
+pIntervalDolna=0;
+pHodnota=0;
+return 0;
+}
